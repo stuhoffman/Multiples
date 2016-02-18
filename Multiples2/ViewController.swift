@@ -50,6 +50,7 @@ class ViewController: UIViewController , UITextFieldDelegate{
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         addText.resignFirstResponder()
+        playButton.enabled = true
         return true
     }
     
@@ -59,6 +60,7 @@ class ViewController: UIViewController , UITextFieldDelegate{
         logoImage.hidden = false
         addText.hidden = false
         playButton.hidden = false
+        playButton.enabled = false
         
         displayText.hidden = true
         addButton.hidden = true
