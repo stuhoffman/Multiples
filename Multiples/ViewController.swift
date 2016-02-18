@@ -10,16 +10,50 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    //props
+    var startingValue: Int? = 0
+    var currentSum: Int = 0
+    
+    //outlets
+    @IBOutlet var logoImage: UIImageView!
+    @IBOutlet var addText: UITextField!
+    @IBOutlet var multipleText: UITextField!
+    @IBOutlet var addButton: UIButton!
+    @IBOutlet var playButton: UIButton!
+
+    
+    //actions
+    @IBAction func AddPressed(sender: UIButton) {
+        if (addIsValid())
+        {
+            startingValue = Int(multipleText.text!)
+            currentSum = currentSum + startingValue!
+        }
+        
+        addText.text = "\(currentSum)"
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func PlayPressed(sender: UIButton)
+    {
+        logoImage.hidden = true
+        multipleText.hidden = true
+        playButton.hidden = true
+        
+        addText.hidden = false
+        addButton.hidden = false
     }
-
-
+    
+    /*Tells us that the input value is not nil
+    and not empty space
+    */
+    func addIsValid() -> Bool {
+        if (multipleText.text != nil && multipleText.text != "")
+        {
+            return true
+        }
+        return false
+    }
+    
+    
 }
 
