@@ -18,30 +18,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="chalkboard_blank_bg" translatesAutoresizingMaskIntoConstraints="NO" id="fu9-sF-ENf">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="chalkboard_blank_bg" translatesAutoresizingMaskIntoConstraints="NO" id="fu9-sF-ENf" userLabel="background">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logo_img" translatesAutoresizingMaskIntoConstraints="NO" id="7Ja-XT-IYe">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logo_img" translatesAutoresizingMaskIntoConstraints="NO" id="7Ja-XT-IYe" userLabel="logo">
                                 <rect key="frame" x="180" y="20" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="6Yt-Nz-BFG"/>
                                     <constraint firstAttribute="width" constant="240" id="xPf-jV-TRf"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Post-IT-Play_button_img" translatesAutoresizingMaskIntoConstraints="NO" id="Z6q-5J-yIW">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Post-IT-Play_button_img" translatesAutoresizingMaskIntoConstraints="NO" id="Z6q-5J-yIW" userLabel="playButton">
                                 <rect key="frame" x="180" y="433" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="9G3-vL-1fR"/>
                                     <constraint firstAttribute="height" constant="128" id="fLB-26-Kdj"/>
                                 </constraints>
                             </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What multiple to add by?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="88q-bL-QZ2" userLabel="multipleText">
+                                <rect key="frame" x="112" y="386" width="377" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Z6q-5J-yIW" secondAttribute="bottom" constant="39" id="Ndm-Sf-yKr"/>
                             <constraint firstItem="7Ja-XT-IYe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RhK-c2-E6b"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fu9-sF-ENf" secondAttribute="bottom" id="UFY-0d-Rgv"/>
+                            <constraint firstItem="88q-bL-QZ2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VYg-Dn-lmM"/>
                             <constraint firstItem="Z6q-5J-yIW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dgy-ad-irX"/>
+                            <constraint firstItem="Z6q-5J-yIW" firstAttribute="top" secondItem="88q-bL-QZ2" secondAttribute="bottom" constant="18" id="lD6-bv-HB7"/>
                             <constraint firstItem="fu9-sF-ENf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="pdQ-tD-19X"/>
                             <constraint firstItem="7Ja-XT-IYe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="sFK-YU-D8o"/>
                         </constraints>
