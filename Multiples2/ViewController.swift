@@ -12,7 +12,8 @@ class ViewController: UIViewController , UITextFieldDelegate{
     //props
     var startingValue: Int? = 0
     var currentSum: Int = 0
-
+    var maxValue: Int = 10
+    
     //Outlets
     @IBOutlet var addText: UITextField!
     @IBOutlet var playButton: UIButton!
@@ -23,9 +24,13 @@ class ViewController: UIViewController , UITextFieldDelegate{
     
     //Actions
     @IBAction func addButtonPressed(sender: UIButton) {
-        if (addIsValid())
+        if (addIsValid() && maxValue > 0)
         {
             currentSum = currentSum + startingValue!
+            maxValue--
+        } else if (maxValue <= 0)
+        {
+            resetApp()
         }
         
         displayText.text = "\(currentSum)"
@@ -46,6 +51,20 @@ class ViewController: UIViewController , UITextFieldDelegate{
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         addText.resignFirstResponder()
         return true
+    }
+    
+    func resetApp()
+    {
+        maxValue = 10
+        logoImage.hidden = false
+        addText.hidden = false
+        playButton.hidden = false
+        
+        displayText.hidden = true
+        addButton.hidden = true
+        addText.text = "Number to add"
+        currentSum = 0
+
     }
     
     func addIsValid() -> Bool {
