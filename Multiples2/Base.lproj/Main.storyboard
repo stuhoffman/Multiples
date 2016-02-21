@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="chalkboard_blank_bg" translatesAutoresizingMaskIntoConstraints="NO" id="xbN-t6-rtV" userLabel="backgroundImage">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chalkboard_blank_bg" translatesAutoresizingMaskIntoConstraints="NO" id="xbN-t6-rtV" userLabel="backgroundImage">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eS9-h1-Dwy" userLabel="playButton">
@@ -69,15 +69,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="xbN-t6-rtV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="0He-DT-fwH"/>
                             <constraint firstItem="eS9-h1-Dwy" firstAttribute="top" secondItem="Ugy-7D-hb5" secondAttribute="bottom" constant="26" id="CFC-Tg-e2P"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eS9-h1-Dwy" secondAttribute="bottom" constant="54" id="Dxu-P0-9rr"/>
                             <constraint firstItem="pwF-UE-cfW" firstAttribute="top" secondItem="Fgj-Fe-jUs" secondAttribute="bottom" constant="38" id="H55-Sk-Muw"/>
                             <constraint firstItem="eS9-h1-Dwy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JII-t5-fMa"/>
                             <constraint firstItem="Ugy-7D-hb5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lov-Gb-rVd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xbN-t6-rtV" secondAttribute="bottom" id="Z2l-XH-6Nq"/>
                             <constraint firstItem="Fgj-Fe-jUs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="dWG-D8-OqT"/>
+                            <constraint firstAttribute="trailing" secondItem="xbN-t6-rtV" secondAttribute="trailing" id="oLe-DF-Opb"/>
                             <constraint firstItem="pwF-UE-cfW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="out-1M-GES"/>
                             <constraint firstItem="Fgj-Fe-jUs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rKS-lF-kuF"/>
                             <constraint firstItem="b92-cG-7gS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="syi-4O-hLX"/>
+                            <constraint firstItem="xbN-t6-rtV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="u9V-au-buv"/>
                             <constraint firstItem="b92-cG-7gS" firstAttribute="top" secondItem="pwF-UE-cfW" secondAttribute="bottom" constant="60" id="wTO-hg-6kR"/>
                         </constraints>
                     </view>
